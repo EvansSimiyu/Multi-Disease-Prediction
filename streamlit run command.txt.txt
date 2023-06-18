@@ -1,0 +1,1 @@
+streamlit run "E:\COURSE DONE\ML\M.L Projects\Multiple Disease Prediction\multiple_disease_prediction"
