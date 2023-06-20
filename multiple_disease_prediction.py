@@ -7,7 +7,6 @@ Created on Thu May 18 05:56:24 2023
 
 import  pickle
 import streamlit as st
-import sklearn
 import numpy as np
 import pandas as pd
 
