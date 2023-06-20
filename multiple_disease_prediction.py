@@ -7,8 +7,6 @@ Created on Thu May 18 05:56:24 2023
 
 import  pickle
 import streamlit as st
-import streamlit_option_menu
-from streamlit_option_menu import option_menu
 import sklearn
 import numpy as np
 import pandas as pd
@@ -21,12 +19,18 @@ heart_disease_model = pickle.load(open('E:\\COURSE DONE\\ML\\M.L Projects\\Multi
 parkinsons_disease_model = pickle.load(open('E:\\COURSE DONE\\ML\\M.L Projects\\Multiple Disease Prediction\\saved models\\Parkinson_disease_prediction.sav','rb'),errors='ignore',encoding='latin1')
 
 with st.sidebar:
-    selected = option_menu('Multiple Disease Prediction System',['Diabetes Prediction',
-                                                                 'Heart Disease Prediction',
-                                                                 'Parkinsons Disease Prediction',],
-                                                                  icons=['activity','heart','person'],
-                                                                   default_index=0)
+    # selected = option_menu('Multiple Disease Prediction System',['Diabetes Prediction',
+    #                                                              'Heart Disease Prediction',
+    #                                                              'Parkinsons Disease Prediction',],
+    #                                                               icons=['activity','heart','person'],
+    #                                                                default_index=0)
 
+       selected = st.selectbox(
+        'Multiple Disease Prediction System',
+        ('Diabetes Prediction',
+         'Heart Disease Prediction',
+        'Parkinsons Disease Prediction',)
+        )
 #Diabetes Prediction page
 if(selected == 'Diabetes Prediction'):
     #Page title
